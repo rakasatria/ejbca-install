@@ -2,15 +2,15 @@
 # Author: Kobus Grobler
 #
 
-EJBCA_VERSION="6_15_2_1"
-SHASUM="74743302559645761481ce17259541f2b0d66c97cea051c8dff511bb037642a7"
+EJBCA_VERSION="6_15_2_6"
+SHASUM="6758f67ce5926de3e9a8b95af15dad7c1fcc4954"
 WILDFLY_HOME="/opt/wildfly"
 DB_VERSION="2.2.6"
 DB_SHASUM="4d28fbd8fd4ea239b0ef9482f56ce77e2ef197a60d523a8ee3c84eb984fc76fe"
 EHSM_VERSION=2.1
 EHSM_SHASUM="0a9547555f804d81aca21ea89a95044ad0f42e494723eef44dee27f73ecd6a57"
 
-sudo apt-get install ant mariadb-server
+sudo apt-get install ant mariadb-server zip unzip softhsm2
 sudo usermod -a -G plugdev wildfly
 sudo mysql -u root < mariadb.sql
 sudo mysql -u root < create-tables-ejbca-mysql.sql
